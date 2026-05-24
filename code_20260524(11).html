@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中华民族共同体数字化学习平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        /* 顶部头部横幅 */
+        header {
+            background: linear-gradient(180deg, #dd2222 0%, #c41111 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        /* 纯文字导航栏 */
+        .top-nav {
+            background-color: #fff;
+            border-bottom: 2px solid #dd2222;
+            padding: 16px 10px;
+        }
+        .top-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+        .top-nav a {
+            color: #b81818;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        .top-nav a:hover {
+            transform: translateY(-3px);
+            color: #dd2222;
+            text-decoration: underline;
+        }
+        /* 内容容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            color: #dd2222;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .section-title::after {
+            content: "";
+            width: 80px;
+            height: 3px;
+            background-color: #dd2222;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+        /* 内容卡片 */
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #dd2222;
+        }
+        .card h2 {
+            color: #dd2222;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            color: #aa1111;
+            margin: 15px 0 8px;
+        }
+        p {
+            margin: 8px 0;
+            text-indent: 2em;
+            line-height: 1.7;
+        }
+        ul {
+            margin: 10px 0 10px 25px;
+            line-height: 1.7;
+        }
+        /* 课程列表布局 */
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .course-item {
+            padding: 20px;
+            background: #fef5f5;
+            border-radius: 6px;
+            border: 1px solid #ffdddd;
+        }
+        /* 答题区域样式 */
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fef5f5;
+            border-radius: 6px;
+        }
+        .opt {
+            margin: 8px 15px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .right {
+            color: #00a854;
+        }
+        .wrong {
+            color: #dd2222;
+        }
+        button.submit {
+            background-color: #dd2222;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button.submit:hover {
+            background-color: #bb1111;
+        }
+        footer {
+            background: linear-gradient(180deg, #c41111 0%, #dd2222 100%);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部渐变横幅 -->
+    <header>
+        <h1>铸牢中华民族共同体意识</h1>
+        <p>《中华民族共同体概论》数字化学习平台</p>
+    </header>
+
+    <!-- 纯文字导航栏 -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#theory">基础理论内涵</a></li>
+            <li><a href="#education">全书十六讲精华内容</a></li>
+            <li><a href="#culture">民族多元特色文化</a></li>
+            <li><a href="#history">中华民族历史观</a></li>
+            <li><a href="#value">新时代共同体时代价值</a></li>
+            <li><a href="#quiz">知识自测答题</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- 第一讲 基础理论内涵 -->
+        <div class="card" id="theory">
+            <h2 class="section-title" style="margin-bottom:20px;">理念内涵 · 第一讲 基础理论（核心重点）</h2>
+            <h3>第一节 中华民族共同体基本概念</h3>
+            <p><strong>中华民族</strong>：由我国56个民族共同组成的命运整体，各民族在漫长历史中不断交融共生，形成了血脉相连、休戚与共的整体。</p>
+            <p><strong>中华民族共同体</strong>：各民族在政治、经济、文化、社会、生态等领域深度联结，形成的荣辱与共、命运相连的统一共同体。</p>
+            <p><strong>中华民族共同体意识</strong>：全体国民对共同历史、共同家园、共同文化、共同命运、共同价值的高度认同与归属感，是凝聚民族力量的精神纽带。</p>
+
+            <h3>第二节 中华民族共同体基本理念</h3>
+            <ul>
+                <li><strong>十二个必须</strong>：必须从中华民族伟大复兴战略高度把握民族工作；必须推动各民族共同走向现代化；必须筑牢中华民族共同体意识；必须坚持各民族一律平等；必须坚持铸牢主线；必须坚持依法治理民族事务；必须促进各民族广泛交往交流交融；必须坚定中华文化认同；必须统筹发展与安全；必须防范化解民族领域风险；必须坚持党对民族工作领导；必须夯实基层民族工作根基。</li>
+                <li><strong>五个共同</strong>：共同缔造伟大祖国、共同书写悠久历史、共同创造灿烂文化、共同培育伟大精神、共同捍卫统一疆域。</li>
+                <li><strong>五个相</strong>：各民族相处相融、文化相通相生、情感相亲相近、利益相依共存、命运相连与共。</li>
+                <li><strong>四个与共</strong>：休戚与共、荣辱与共、生死与共、命运与共。</li>
+                <li><strong>四对关系</strong>：正确把握共同性与差异性、中华民族共同体与各民族、中华文化与各民族文化、物质文明与精神文明关系。</li>
+            </ul>
+
+            <h3>第三节 中华民族共同体理论渊源</h3>
+            <p><strong>马克思主义理论</strong>：民族平等、民族团结、民族解放与共同发展思想，为共同体建设提供了根本理论依据。</p>
+            <p><strong>大一统历史传统</strong>：数千年统一多民族国家演进，家国一体、天下一统理念积淀了深厚的历史根基。</p>
+            <p><strong>两个结合</strong>：马克思主义基本原理同中国具体实际相结合、同中华优秀传统文化相结合，形成了本土化的民族理论成果。</p>
+
+            <h3>第四节 全面推进中华民族共同体建设</h3>
+            <p>以铸牢中华民族共同体意识为主线，统筹经济发展、文化传承、社会治理、民族团结、国家安全，推动各民族同心聚力，稳步实现中华民族伟大复兴。</p>
+        </div>
+
+        <!-- 十六讲精华内容 -->
+        <div class="card" id="education">
+            <h2 class="section-title" style="margin-bottom:20px;">全书十六讲精华内容 · 重点详解</h2>
+            <div class="course-grid">
+                <div class="course-item">
+                    <h3>第二讲 树立正确的中华民族历史观</h3>
+                    <p>树立正确的中华民族历史观，核心是要从整体史观出发，摒弃狭隘的民族史观和地方史观，深刻认识到各民族都是中华历史的共同创造者。在漫长的历史进程中，各民族通过迁徙、杂居、通婚、贸易等方式不断交流融合，共同推动了中华文明的发展与进步。我们要坚持历史真实性，反对历史虚无主义，警惕分裂势力对历史的歪曲与篡改，以中华民族共同体的视角看待民族迁徙、政权更迭与文化交流，凝聚起全体国民对共同历史的集体记忆，夯实铸牢中华民族共同体意识的历史根基。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第三讲 文明初现与中华民族起源（史前时期）</h3>
+                    <p>中华大地是中华民族的摇篮，史前时期的文明呈现出“多元一体”的鲜明特征。黄河、长江、辽河等流域分布着仰韶文化、龙山文化、良渚文化等众多史前文化遗址，它们之间并非孤立存在，而是通过文化传播与人群迁徙相互影响、相互渗透，形成了早期的文化共同体。远古时期的华夏、东夷、苗蛮等部落集团，在长期的冲突与融合中，逐渐汇聚成更大的族群共同体，为中华民族的形成奠定了早期基础。这些史前文化的交流与整合，塑造了中华民族“同源共脉、多元共生”的初始格局，证明了中华文明的连续性与统一性。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第四讲 天下秩序与华夏共同体演进（夏商周时期）</h3>
+                    <p>夏商周三代是华夏共同体形成与发展的关键时期。夏朝的建立标志着早期国家形态的出现，商、周时期通过分封制和宗法制，构建了以“天下共主”为核心的政治秩序，确立了华夏认同的文化基础。这一时期，华夏族与周边的夷、狄、戎、蛮等部族不断互动，通过战争、朝贡、联姻等方式，推动了族群的融合与文化的交流。周礼所确立的礼乐制度，不仅规范了华夏内部的社会秩序，也成为周边部族向往和学习的文化典范，“华夷之辨”的观念逐渐向“华夷一家”的理念过渡，为后世大一统思想的形成奠定了雏形。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第五讲 大一统与中华民族初步形成（秦汉时期）</h3>
+                    <p>秦汉时期实现了中国历史上第一次真正意义上的大一统，为中华民族的初步形成奠定了坚实基础。秦朝统一六国后，推行“书同文、车同轨、统一度量衡”等政策，打破了地域隔阂，促进了全国范围内的经济文化交流。汉朝继承并发展了秦朝的制度，通过开疆拓土，将西域、西南夷等地区纳入版图，形成了多民族统一国家的格局。这一时期，汉族作为主体民族正式形成，同时各少数民族也与汉族建立了广泛的联系，中央集权制度的巩固和疆域的拓展，推动了中华民族共同体从松散走向紧密，进入了统一发展的新阶段。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第六讲 “五胡”入华与中华民族大交融（魏晋南北朝时期）</h3>
+                    <p>魏晋南北朝时期是中华民族历史上一次大规模的民族大交融时期。北方的匈奴、鲜卑、羯、氐、羌等少数民族纷纷内迁，建立了多个政权，时局处于长期动荡状态。但战乱背后是各民族前所未有的深度交融，少数民族主动借鉴中原制度文化，汉族也吸纳游牧民族生活习俗，服饰、饮食、歌舞、生产技艺相互渗透。族群通婚普遍增多，地域界限逐步模糊，多元文化相互包容共生，极大扩充了中华民族族群构成与文化底蕴，为后续隋唐盛世与民族繁荣打下深厚基础。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第七讲 华夷一体与中华民族空前繁盛（隋唐五代时期）</h3>
+                    <p>隋唐时期是中华民族共同体发展的鼎盛阶段，华夷一体思想深入人心。朝廷实行包容开明的民族治理模式，尊重各族风俗传统，吸纳少数民族人才参政理政。都城长安汇聚海内外各族人士，商贸往来频繁，文化互通繁荣。农耕文明与游牧文明深度互补，中原礼乐文化向外传播，边疆特色文化也丰富中原生活。各民族认同感不断提升，国家疆域稳固、国力强盛，中华民族共同体影响力辐射广泛，成为当时世界文明交流交融的典范。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第八讲 共奉中国与中华民族内聚发展（辽宋夏金时期）</h3>
+                    <p>这一阶段多个民族政权并立对峙，但始终同属中华文明体系，各方都秉持中华正统认知。战争间隙经贸往来从未中断，边境榷场成为物资互换、文化交流的重要场所。中原农耕技术、儒家思想向边疆传播，游牧民族畜牧产业、民俗文化反向影响内地。各族民众在长期相处中加深文化认同与家国归属感，族群向心力持续凝聚，没有因政权分裂割裂民族整体联系，不断推动中华民族向内聚合发展。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第九讲 混一南北与中华民族大统合（元朝时期）</h3>
+                    <p>元朝结束长期分裂割据，完成全国大范围统一，疆域版图达到空前规模。西藏、云南等边疆区域正式纳入中央管辖，行省制度完善国家治理体系。大规模人口迁徙促使各族交错杂居，生活习俗、语言文化相互融合，催生全新民族群体。水陆驿站网络畅通全域，商贸流通便捷顺畅，打破地域阻隔。南北东西各族深度整合，版图、族群、治理体系全面统合，推动中华民族整体格局走向成熟稳固。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第十讲 中外会通与中华民族接续巩固（明朝时期）</h3>
+                    <p>明朝稳固前代疆域基础，优化边疆民族管理体制，维护多民族国家统一安定。对内加强各族日常交流，茶马古道维系内地与边疆联系，民俗、技艺、物产互通共享。对外积极开展远洋交流，郑和远航促进中外文明互鉴，吸纳异域文化精华，同时传播中华传统文化。民族相处和睦稳定，共同体凝聚力持续加固，文化传承有序延续，让中华民族统一整体形态不断夯实完善。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第十一讲 中华一家与中华民族格局底定（清前中期）</h3>
+                    <p>清前中期完成边疆统一，平定分裂叛乱，完善西藏、新疆、台湾等地管辖制度，最终奠定现代中国疆域范围。朝廷推行兼容并蓄的民族政策，调和满汉及各民族关系，促进文化互通共融。各族民众归属统一国家，地域、族群、文化框架全部定型。历经千年演变发展，多元一体的中华民族整体格局正式确立，成为后世国家统一、民族团结的稳固根基。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第十二讲 民族危亡与中华民族意识觉醒(1840-1919)</h3>
+                    <p>鸦片战争后国家深陷危难，外来侵略不断冲击国土与民族生存根基。往日族群差异逐步淡化，全体国人放下隔阂，携手投身救亡图存运动。各类反抗斗争、革新运动席卷全国，不分民族共同捍卫家国主权。中华民族整体概念逐步普及，民众家国一体认知不断强化，原本分散的族群意识凝聚为统一民族意识，实现中华民族整体性觉醒，开启全民团结救国的历史新阶段。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第十三讲 先锋队与中华民族独立解放(1919-1949)</h3>
+                    <p>五四运动开启新民主主义革命，先进政党成为引领民族解放的核心力量。始终坚守民族平等团结原则，团结全国各族群众结成统一战线。抗日战争时期各族同心抵御外敌，少数民族武装、群众全力支援抗战事业。解放战争凝聚全民力量，推翻压迫统治。历经数十年艰苦奋斗，各族人民并肩作战，彻底实现民族独立与国家主权完整，让中华民族摆脱屈辱历史，迎来全新发展开端。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第十四讲 新中国与中华民族新发展(1949-2012)</h3>
+                    <p>新中国成立构建平等团结互助和谐的新型民族关系，落实民族区域自治制度，保障各族群众平等权利与当家作主地位。国家大力帮扶民族地区建设，完善交通、教育、医疗基础配套，缩小区域发展差距。各族群众交往交融愈发密切，经济协同发展，文化共同传承。牢固树立三个离不开思想，民族凝聚力不断增强，中华民族共同体在和平建设中稳步壮大，各民族携手共建美好家园。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第十五讲 新时代与中华民族共同体建设(2012—至今)</h3>
+                    <p>新时代将铸牢中华民族共同体意识定为民族工作主线，全方位推动各族交往交流交融。打造互嵌式生活与社会环境，增进日常相处情感联结。深挖传承中华共有文化，强化全体国民文化归属感与民族认同。同步推进民族地区现代化建设，共享发展成果，携手迈向共同富裕。凝聚全体中华儿女力量，不断巩固民族团结大局，为民族复兴事业汇聚源源不断的精神与实践动力。</p>
+                </div>
+                <div class="course-item">
+                    <h3>第十六讲 文明新路与人类命运共同体</h3>
+                    <p>中华民族多元一体发展模式，为世界处理民族、文明关系提供优秀范例。秉持文明平等互鉴理念，尊重全球文化多样性，摒弃文明对立偏见。依托自身团结发展经验，推动国际和平协作、互利共赢。人类命运共同体理念与中华民族共同体思想一脉相通，倡导各国携手应对共同挑战。中华民族不断以自身发展助力世界文明进步，推动全球走向包容共处、共同繁荣的崭新发展道路。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 民族多元特色文化 -->
+        <div class="card" id="culture">
+            <h2 class="section-title" style="margin-bottom:20px;">民族多元特色文化 · 民俗、艺术、文化汇总</h2>
+            <p>中华民族多元一体的文化格局，体现在各民族丰富多彩的民俗、艺术与文化之中。汉族的春节、端午节，蒙古族的那达慕大会，藏族的雪顿节，维吾尔族的古尔邦节，傣族的泼水节等，共同构成了中华民族的节庆文化体系。在艺术方面，汉族的京剧、书法，蒙古族的长调、马头琴，藏族的唐卡、锅庄舞，维吾尔族的木卡姆，侗族的大歌等，都是中华文化的瑰宝。各民族的民俗文化，如服饰、饮食、建筑、礼仪等，也各具特色，展现了不同民族的生活智慧与文化魅力。这些多元的文化元素，在长期的交流互鉴中，共同丰富和发展了中华文化，成为铸牢中华民族共同体意识的重要文化纽带。</p>
+        </div>
+
+        <!-- 中华民族历史观 -->
+        <div class="card" id="history">
+            <h2 class="section-title" style="margin-bottom:20px;">中华民族历史观 · 交融发展、团结抗争历史脉络</h2>
+            <p>中华民族的历史，是一部各民族交融发展、团结抗争的历史。从史前时期的部落联盟，到夏商周的华夏共同体，再到秦汉的大一统，魏晋南北朝的民族大交融，隋唐的华夷一体，辽宋夏金的内聚发展，元朝的大统合，明清的格局底定，中华民族共同体经历了从松散到紧密、从多元到一体的漫长发展过程。在近代，面对外来侵略，各民族人民团结起来，共同抗争，为国家独立和民族解放作出了巨大牺牲。新中国成立后，各民族在党的领导下，共同建设社会主义，推动民族地区发展。历史证明，各民族的交融与团结，是中华民族不断发展壮大的根本动力，也是实现中华民族伟大复兴的重要保障。</p>
+        </div>
+
+        <!-- 新时代共同体时代价值 -->
+        <div class="card" id="value">
+            <h2 class="section-title" style="margin-bottom:20px;">新时代共同体时代价值 · 现实意义、使命责任、发展方向</h2>
+            <p>铸牢中华民族共同体意识，是新时代民族工作的主线，具有重大的现实意义和深远的历史意义。从现实意义来看，它是维护国家统一和民族团结的必然要求，是实现各民族共同繁荣发展的重要保障，也是防范化解民族领域风险挑战的根本举措。从使命责任来看，铸牢中华民族共同体意识，是全体中华儿女的共同责任，需要各民族人民共同参与、共同建设、共同维护。从发展方向来看，新时代的中华民族共同体建设，要坚持以铸牢中华民族共同体意识为主线，推动各民族广泛交往交流交融，促进各民族共同走向现代化，不断增强中华民族的凝聚力和向心力，为实现中华民族伟大复兴的中国梦而努力奋斗。</p>
+        </div>
+
+        <!-- 知识答题自测 -->
+        <div class="card" id="quiz">
+            <h2 class="section-title" style="margin-bottom:20px;">知识自测答题（共10题）</h2>
+            <button class="submit" onclick="checkAll()">提交答案 查看正误</button>
+            <div id="quizBox">
+                <div class="question" id="q1">
+                    <p>1.中华民族共同体意识核心共识不包含以下哪项？</p>
+                    <div class="opt"><input type="radio" name="q1" value="A">A.命运相连</div>
+                    <div class="opt"><input type="radio" name="q1" value="B">B.各自独立发展</div>
+                    <div class="opt"><input type="radio" name="q1" value="C">C.荣辱与共</div>
+                    <div class="opt"><input type="radio" name="q1" value="D">D.生死相依</div>
+                    <div class="result" id="res1"></div>
+                </div>
+                <div class="question" id="q2">
+                    <p>2.“四个与共”不包括下列哪一项？</p>
+                    <div class="opt"><input type="radio" name="q2" value="A">A.休戚与共</div>
+                    <div class="opt"><input type="radio" name="q2" value="B">B.利益独享</div>
+                    <div class="opt"><input type="radio" name="q2" value="C">C.荣辱与共</div>
+                    <div class="opt"><input type="radio" name="q2" value="D">D.命运与共</div>
+                    <div class="result" id="res2"></div>
+                </div>
+                <div class="question" id="q3">
+                    <p>3.中华民族大一统格局初步形成于哪个朝代？</p>
+                    <div class="opt"><input type="radio" name="q3" value="A">A.秦汉</div>
+                    <div class="opt"><input type="radio" name="q3" value="B">B.隋唐</div>
+                    <div class="opt"><input type="radio" name="q3" value="C">C.元朝</div>
+                    <div class="opt"><input type="radio" name="q3" value="D">D.明朝</div>
+                    <div class="result" id="res3"></div>
+                </div>
+                <div class="question" id="q4">
+                    <p>4.筑牢民族工作主线是？</p>
+                    <div class="opt"><input type="radio" name="q4" value="A">A.区域单独发展</div>
+                    <div class="opt"><input type="radio" name="q4" value="B">B.铸牢中华民族共同体意识</div>
+                    <div class="opt"><input type="radio" name="q4" value="C">C.划分民族界限</div>
+                    <div class="opt"><input type="radio" name="q4" value="D">D.弱化历史认同</div>
+                    <div class="result" id="res4"></div>
+                </div>
+                <div class="question" id="q5">
+                    <p>5.现代中国疆域格局基本底定于哪个时期？</p>
+                    <div class="opt"><input type="radio" name="q5" value="A">A.清前中期</div>
+                    <div class="opt"><input type="radio" name="q5" value="B">B.宋朝</div>
+                    <div class="opt"><input type="radio" name="q5" value="C">C.魏晋</div>
+                    <div class="opt"><input type="radio" name="q5" value="D">D.民国</div>
+                    <div class="result" id="res5"></div>
+                </div>
+                <div class="question" id="q6">
+                    <p>6.中华民族意识全面觉醒始于哪一历史阶段？</p>
+                    <div class="opt"><input type="radio" name="q6" value="A">A.1840年后近代危亡时期</div>
+                    <div class="opt"><input type="radio" name="q6" value="B">B.远古史前</div>
+                    <div class="opt"><input type="radio" name="q6" value="C">C.盛唐时期</div>
+                    <div class="opt"><input type="radio" name="q6" value="D">D.元朝大一统</div>
+                    <div class="result" id="res6"></div>
+                </div>
+                <div class="question" id="q7">
+                    <p>7.不属于五个共同内容的是？</p>
+                    <div class="opt"><input type="radio" name="q7" value="A">A.共同创造文化</div>
+                    <div class="opt"><input type="radio" name="q7" value="B">B.单独垄断历史</div>
+                    <div class="opt"><input type="radio" name="q7" value="C">C.共同缔造祖国</div>
+                    <div class="opt"><input type="radio" name="q7" value="D">D.共同捍卫疆域</div>
+                    <div class="result" id="res7"></div>
+                </div>
+                <div class="question" id="q8">
+                    <p>8.新时代共同体建设起始时间为？</p>
+                    <div class="opt"><input type="radio" name="q8" value="A">A.2012年至今</div>
+                    <div class="opt"><input type="radio" name="q8" value="B">B.1949年</div>
+                    <div class="opt"><input type="radio" name="q8" value="C">C.1978年</div>
+                    <div class="opt"><input type="radio" name="q8" value="D">D.1919年</div>
+                    <div class="result" id="res8"></div>
+                </div>
+                <div class="question" id="q9">
+                    <p>9.中华民族共同体理论不溯源哪一项？</p>
+                    <div class="opt"><input type="radio" name="q9" value="A">A.马克思主义民族理论</div>
+                    <div class="opt"><input type="radio" name="q9" value="B">B.大一统历史传统</div>
+                    <div class="opt"><input type="radio" name="q9" value="C">C.两个结合理论成果</div>
+                    <div class="opt"><input type="radio" name="q9" value="D">D.分裂割据思想</div>
+                    <div class="result" id="res9"></div>
+                </div>
+                <div class="question" id="q10">
+                    <p>10.各族相处核心准则是？</p>
+                    <div class="opt"><input type="radio" name="q10" value="A">A.平等团结交往交融</div>
+                    <div class="opt"><input type="radio" name="q10" value="B">B.相互排斥隔阂</div>
+                    <div class="opt"><input type="radio" name="q10" value="C">C.优劣区分对待</div>
+                    <div class="opt"><input type="radio" name="q10" value="D">D.封闭互不往来</div>
+                    <div class="result" id="res10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        中华民族共同体数字化学习平台 | 铸牢中华民族共同体意识
+    </footer>
+
+    <script>
+        // 全局平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e){
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetEle = document.querySelector(targetId);
+                if(targetEle){
+                    targetEle.scrollIntoView({behavior:"smooth"});
+                }
+            });
+        });
+
+        const answer = {
+            q1:"B",q2:"B",q3:"A",q4:"B",q5:"A",
+            q6:"A",q7:"B",q8:"A",q9:"D",q10:"A"
+        };
+        function checkAll(){
+            let score = 0;
+            for(let i=1;i<=10;i++){
+                let name = "q"+i;
+                let userSel = document.querySelector('input[name="'+name+'"]:checked');
+                let resDom = document.getElementById("res"+i);
+                if(!userSel){
+                    resDom.innerHTML = `<span class="wrong">未作答，正确答案：${answer[name]}</span>`;
+                    continue;
+                }
+                if(userSel.value === answer[name]){
+                    resDom.innerHTML = `<span class="right">回答正确</span>`;
+                    score++;
+                }else{
+                    resDom.innerHTML = `<span class="wrong">回答错误，正确答案：${answer[name]}</span>`;
+                }
+            }
+            alert(`答题完成！总分10分，您得分：${score}分`);
+        }
+    </script>
+</body>
+</html>
